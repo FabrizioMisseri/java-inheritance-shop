@@ -19,7 +19,7 @@ public class Product {
 
     private double ivaIndex;
 
-    public Product(String codice, String nome, String descrizione, double prezzo, double iva) {
+    public Product(String nome, String descrizione, double prezzo, double iva) {
         this.codice = Integer.toString(this.rand.nextInt(999999999));
         this.nome = nome;
         this.descrizione = descrizione;
@@ -71,5 +71,13 @@ public class Product {
         this.iva = iva;
     }
 
-
+    @Override
+    public String toString() {
+        return "codice='" + codice + '\'' +
+                ", nome='" + nome + '\'' +
+                ", descrizione='" + descrizione + '\'' +
+                ", prezzo=" + prezzo +
+                ", iva=" + iva +
+                ", ivaIndex=" + ivaIndex;
+    }
 }

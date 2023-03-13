@@ -8,8 +8,8 @@ public class Tv extends Product{
 
     private int height;
 
-    public Tv(String codice, String nome, String descrizione, double prezzo, double iva, boolean smart, int width, int height) {
-        super(codice, nome, descrizione, prezzo, iva);
+    public Tv(String nome, String descrizione, double prezzo, double iva, boolean smart, int width, int height) {
+        super(nome, descrizione, prezzo, iva);
         this.smart = smart;
         this.width = width;
         this.height = height;
@@ -40,5 +40,14 @@ public class Tv extends Product{
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "Tv{" + super.toString() + '\'' +
+                "smart=" + smart +
+                ", width=" + width +
+                ", height=" + height +
+                '}';
     }
 }

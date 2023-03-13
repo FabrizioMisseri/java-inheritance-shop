@@ -6,8 +6,8 @@ public class Headphone extends Product {
 
     private String colore;
 
-    public Headphone(String codice, String nome, String descrizione, double prezzo, double iva, boolean wireless, String colore) {
-        super(codice, nome, descrizione, prezzo, iva);
+    public Headphone(String nome, String descrizione, double prezzo, double iva, boolean wireless, String colore) {
+        super(nome, descrizione, prezzo, iva);
         this.wireless = wireless;
         this.colore = colore;
     }
@@ -30,5 +30,13 @@ public class Headphone extends Product {
 
     public void setColore(String colore) {
         this.colore = colore;
+    }
+
+    @Override
+    public String toString() {
+        return "Headphone{" + super.toString() + '\'' +
+                "wireless=" + wireless +
+                ", colore='" + colore + '\'' +
+                '}';
     }
 }

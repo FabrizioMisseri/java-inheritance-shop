@@ -1,14 +1,17 @@
 package inheritance.shop;
 
+import java.util.Random;
+
 public class Smartphone extends Product {
 
     private String imei;
     private int memoria;
 
+    Random rand = new Random();
 
-    public Smartphone(String codice, String nome, String descrizione, double prezzo, double iva, String imei, int memoria) {
-        super(codice, nome, descrizione, prezzo, iva);
-        this.imei = imei;
+    public Smartphone(String nome, String descrizione, double prezzo, double iva, int memoria) {
+        super(nome, descrizione, prezzo, iva);
+        this.imei = Integer.toString(this.rand.nextInt(999999999));
         this.memoria = memoria;
     }
 
@@ -29,5 +32,13 @@ public class Smartphone extends Product {
 
     public void setMemoria(int memoria) {
         this.memoria = memoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" + super.toString() + '\'' +
+                "imei='" + imei + '\'' +
+                ", memoria=" + memoria +
+                '}';
     }
 }
