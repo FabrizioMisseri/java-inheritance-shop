@@ -54,7 +54,7 @@ public class Tv extends Product{
     @Override
     public double getDiscountedPrice() {
         if (this.smart){
-            return super.getPrezzoIva() * 0.9;
+            return getPrezzoIva() * 0.9;
         }else{
             return super.getDiscountedPrice();
 

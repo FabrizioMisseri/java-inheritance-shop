@@ -45,7 +45,7 @@ public class Smartphone extends Product {
     @Override
     public double getDiscountedPrice() {
         if (this.memoria < 32){
-            return super.getPrezzoIva() * 0.95;
+            return getPrezzoIva() * 0.95;
         }else {
             return super.getDiscountedPrice();
 

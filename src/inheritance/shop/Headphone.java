@@ -42,8 +42,8 @@ public class Headphone extends Product {
 
     @Override
     public double getDiscountedPrice() {
-        if (!this.wireless){
-            return super.getPrezzoIva() * 0.93;
+        if (!wireless){
+            return getPrezzoIva() * 0.93;
         }else{
             return super.getDiscountedPrice();
 
