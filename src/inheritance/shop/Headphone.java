@@ -22,7 +22,6 @@ public class Headphone extends Product {
         return colore;
     }
 
-
     //SETTERS
 
     public void setWireless(boolean wireless) {

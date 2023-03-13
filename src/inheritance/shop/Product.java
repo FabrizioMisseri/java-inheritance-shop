@@ -1,6 +1,7 @@
 package inheritance.shop;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 public class Product {
 //- codice (numero intero)
@@ -8,6 +9,7 @@ public class Product {
 //- descrizione
 //- prezzo
 //- iva
+    Random rand = new Random();
 
     private String codice;
     private String nome;
@@ -18,7 +20,7 @@ public class Product {
     private double ivaIndex;
 
     public Product(String codice, String nome, String descrizione, double prezzo, double iva) {
-        this.codice = codice;
+        this.codice = Integer.toString(this.rand.nextInt(999999999));
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
