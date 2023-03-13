@@ -80,4 +80,8 @@ public class Product {
                 ", iva=" + iva +
                 ", ivaIndex=" + ivaIndex;
     }
+
+    public double getDiscountedPrice(){
+        return this.getPrezzoIva() * 0.98;
+    }
 }

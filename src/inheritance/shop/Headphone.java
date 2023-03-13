@@ -39,4 +39,14 @@ public class Headphone extends Product {
                 ", colore='" + colore + '\'' +
                 '}';
     }
+
+    @Override
+    public double getDiscountedPrice() {
+        if (!this.wireless){
+            return super.getPrezzoIva() * 0.93;
+        }else{
+            return super.getDiscountedPrice();
+
+        }
+    }
 }

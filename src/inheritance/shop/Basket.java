@@ -33,6 +33,7 @@ public class Basket {
 
             Smartphone product = new Smartphone(nome, descrizione, prezzo, iva, memoria);
             System.out.println(product.toString());
+            System.out.print("il prezzo scontato è " + product.getDiscountedPrice());
 
         } else if (userChoice.equalsIgnoreCase("2")) {
             System.out.println("la TV è smart? 1 (SI) - 2 (NO)");
@@ -49,6 +50,8 @@ public class Basket {
             // smart, width, height
             Tv product = new Tv(nome, descrizione, prezzo, iva, smart, width, height);
             System.out.println(product.toString());
+            System.out.print("il prezzo scontato è " + product.getDiscountedPrice());
+
 
         } else if (userChoice.equalsIgnoreCase("3")) {
 
@@ -64,6 +67,8 @@ public class Basket {
             // wireless, colore
             Headphone product = new Headphone(nome, descrizione, prezzo, iva, wireless, color);
             System.out.println(product.toString());
+            System.out.print("il prezzo scontato è " + product.getDiscountedPrice());
+
 
         }else{
             System.out.println("il prodotto non esiste");

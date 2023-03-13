@@ -41,4 +41,14 @@ public class Smartphone extends Product {
                 ", memoria=" + memoria +
                 '}';
     }
+
+    @Override
+    public double getDiscountedPrice() {
+        if (this.memoria < 32){
+            return super.getPrezzoIva() * 0.95;
+        }else {
+            return super.getDiscountedPrice();
+
+        }
+    }
 }

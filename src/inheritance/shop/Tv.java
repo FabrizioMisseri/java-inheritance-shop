@@ -50,4 +50,14 @@ public class Tv extends Product{
                 ", height=" + height +
                 '}';
     }
+
+    @Override
+    public double getDiscountedPrice() {
+        if (this.smart){
+            return super.getPrezzoIva() * 0.9;
+        }else{
+            return super.getDiscountedPrice();
+
+        }
+    }
 }
